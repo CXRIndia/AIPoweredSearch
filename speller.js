@@ -118,6 +118,4 @@ var SpellChecker = function () {
 };
 
 var speller = new SpellChecker();
-speller.train('what are you doing');
-console.log(speller.correct('dong'));
 module.exports = speller;
