@@ -32,8 +32,11 @@ class PrefixTree extends PrefixTreeNode {
         var getRemainingTree = function (string, tree) {
             var node = tree;
             while (string) {
-                node = node.children[string[0]];
-                string = string.substr(1);
+                try{node = node.children[string[0]];
+                string = string.substr(1);}
+                catch(e){
+                    break;
+                }
             }
             return node;
         };
