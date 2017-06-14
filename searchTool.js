@@ -2,23 +2,24 @@ var speller = require('./speller');
 var completion = require('./completion');
 
 class searchTool {
-    train(string1){
+    train(string1) {
         speller.train(string1);
         completion.train(string1);
     }
     predict(input) {
-        
+
         let output = [];
         for (var key in speller.correct(input)) {
-            if(key != "isEmpty"){
+            if (key != "isEmpty") {
                 output.push(key);
             }
         }
-        return output.concat(completion.predictWord(input));
+        output = output.concat(completion.predictWord(input));
+        return output.filter(function (item, index, inputArray) {
+            return inputArray.indexOf(item) == index;
+        });
     }
 }
 
 var search = new searchTool();
 module.exports = search;
-search.train('hi, how are you');
-console.log(search.predict('hiw'));
