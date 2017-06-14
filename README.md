@@ -11,7 +11,7 @@ using _trie data structure_ and _bayes' theorm_.
 > git clone https://github.com/migom6/searchtool.git
 ##### require the searchTool.js file in your project
 ```javascript
-var search= require('./searchTool');
+var search = require('./searchTool');
 ```
 ##### train the model with your training dictionary of strings
 ```javascript
