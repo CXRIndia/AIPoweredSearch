@@ -24,4 +24,5 @@ search.predict(<your testing string>);
 <br>
 <br>
 <br>
-check examples folder for more referance
+
+[check examples folder for more referance](https://github.com/migom6/searchtool/tree/master/examples)
