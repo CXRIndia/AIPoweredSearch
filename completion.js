@@ -56,16 +56,18 @@ class PrefixTree extends PrefixTreeNode {
             allWordsHelper(string, remainingTree);
         }
 
-        return allWords.slice(0,4);
+        return allWords.slice(0, 4);
     }
 
-    logAllWords() {
-        console.log(this.predictWord(''));
+    train(str) {
+        let words = str.split(" ");
+        for (var i = 0; i < words.length; i++) {
+            this.addWord(words[i]);
+        }
     }
 }
 
-var tree = new PrefixTree();
-tree.addWord('how');
-tree.addWord('hio');
-tree.addWord('are');
-console.log(tree.predictWord('h'));
+var completion = new PrefixTree();
+
+
+module.exports = completion;

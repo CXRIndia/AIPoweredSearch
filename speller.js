@@ -118,5 +118,6 @@ var SpellChecker = function () {
 };
 
 var speller = new SpellChecker();
-speller.train('how hiore are yous hous kous');
-console.log(speller.correct('i'));
+speller.train('what are you doing');
+console.log(speller.correct('dong'));
+module.exports = speller;
