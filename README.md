@@ -21,3 +21,7 @@ search.train(<your training set>);
 ```javascript
 search.predict(<your testing string>);
 ```
+<br>
+<br>
+<br>
+check examples folder for more referance
